@@ -328,7 +328,7 @@ nav ul li a:hover {
   pointer-events: none;
   transition: opacity 0.5s ease;
   flex-wrap: wrap;
-  max-width: 50vw; /* Prevent overflow */
+  max-width: 500vw; /* Prevent overflow */
 }
 
 .bottom-nav.show {
