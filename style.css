@@ -338,9 +338,9 @@ nav ul li a:hover {
 
 .bottom-nav a {
   color: white;
-  font-size: 18px;
+  font-size: 200px;
   text-decoration: none;
-  padding: 10px;
+  padding: 300px;
   border-radius: 50%;
   transition: background 0.3s ease, transform 0.3s ease;
   flex: 1 0 auto;
