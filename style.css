@@ -313,20 +313,36 @@ nav ul li a:hover {
   }
 
   .bottom-nav {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 8px 10px;
-  }
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 10px 15px;
+  border-radius: 30px;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  flex-wrap: wrap;
+  max-width: 95vw; /* Prevent overflow */
+}
 
-  .contact-form input,
-  .contact-form textarea {
-    font-size: 0.95rem;
-    padding: 0.6rem;
-  }
+.bottom-nav.show {
+  opacity: 1;
+  pointer-events: auto;
+}
 
-  .contact-form button {
-    font-size: 0.95rem;
-    padding: 0.6rem;
-  }
+.bottom-nav a {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background 0.3s ease, transform 0.3s ease;
+  flex: 1 0 auto;
+  text-align: center;
 }
