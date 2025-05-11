@@ -312,23 +312,22 @@ nav ul li a:hover {
     gap: 10px;
   }
 
-  .bottom-nav {
+  /* Bottom Navigation Panel */
+.bottom-nav {
   position: fixed;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 10px;
+  gap: 20px;
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(10px);
-  padding: 10px 15px;
+  padding: 10px 20px;
   border-radius: 30px;
   z-index: 1000;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.5s ease;
-  flex-wrap: wrap;
-  max-width: 95vw; /* Prevent overflow */
 }
 
 .bottom-nav.show {
@@ -338,11 +337,28 @@ nav ul li a:hover {
 
 .bottom-nav a {
   color: white;
-  font-size: 200px;
+  font-size: 20px;
   text-decoration: none;
-  padding: 300px;
+  padding: 10px;
   border-radius: 50%;
   transition: background 0.3s ease, transform 0.3s ease;
-  flex: 1 0 auto;
-  text-align: center;
+}
+
+.bottom-nav a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.02);
+  box-shadow: 0 0 30px white, 0 0 60px white;
+}
+
+@media (max-width: 480px) {
+  .bottom-nav {
+    gap: 10px;
+    padding: 6px 12px;
+    max-width: 95vw;
+  }
+
+  .bottom-nav a {
+    font-size: 16px;
+    padding: 8px;
+  }
 }
